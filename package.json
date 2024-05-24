@@ -1,0 +1,16 @@
+{
+  "name": "tracalorie-app",
+  "version": "1.0.0",
+  "description": "Calorie tracking app",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --ignore-unknown --check './**/*.*'",
+    "format:fix": "prettier --ignore-unknown --write './**/*.*'"
+  },
+  "author": "Simon Ball",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "3.2.5"
+  }
+}
