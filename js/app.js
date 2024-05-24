@@ -112,3 +112,40 @@ class Workout {
     this.calories = calories;
   }
 }
+
+class App {
+  constructor() {
+    this._tracker = new CalorieTracker();
+    document
+      .getElementById('meal-form')
+      .addEventListener('submit', this._newItem.bind(this, 'meal'));
+    document
+      .getElementById('workout-form')
+      .addEventListener('submit', this._newItem.bind(this, 'workout'));
+  }
+
+  _newItem(type, e) {
+    e.preventDefault();
+    const name = document.getElementById(`${type}-name`);
+    const calories = document.getElementById(`${type}-calories`);
+
+    if (name.value === '' || calories.value === '') {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    if (type === 'meal') {
+      this._tracker.addMeal(new Meal(name.value, +calories.value));
+    } else {
+      this._tracker.addWorkout(new Workout(name.value, +calories.value));
+    }
+
+    name.value = '';
+    calories.value = '';
+
+    const collapseItem = document.getElementById(`collapse-${type}`);
+    const bsCollapse = new bootstrap.Collapse(collapseItem, { toggle: true });
+  }
+}
+
+const app = new App();
