@@ -1,11 +1,11 @@
-/assets
+/src/assets
 # Compiled output
 /dist
 /tmp
 /out-tsc
 /bazel-out
 /lib
-/webfonts
+/src/webfonts
 
 # Node
 /node_modules
