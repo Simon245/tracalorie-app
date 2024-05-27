@@ -1,3 +1,6 @@
+import './assets/css/bootstrap.css';
+import './css/style.css';
+
 class CalorieTracker {
   constructor() {
     this._calorieLimit = Storage.getCalorieLimit();
