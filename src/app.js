@@ -1,3 +1,5 @@
+import '@fortawesome/fontawesome-free/js/all';
+import { Modal, Collapse } from 'bootstrap';
 import './assets/css/bootstrap.css';
 import './css/style.css';
 
